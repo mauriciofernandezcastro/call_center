@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Clientes</h1>
+<div id="clientes">
+<table class="table table-striped">
+<thead>
+<tr>
+<th scope="col">id</th>
+<th scope="col">Numero_telefono</th>
+<th scope="col">Nombre</th>
+<th scope="col">Email</th>
+<th scope="col" colspan="2"></th>
+</tr>
+</thead>
+<tbody>
+
+<div id="clientes">
+  <% @clientes.each do |cliente| %>
+    <%= render cliente %>
+    <p>
+      <%= link_to "Show this cliente", cliente %>
+    </p>
+  <% end %>
+</div>
+</tbody>
+</table>
+
+
+
+<%= link_to "New cliente", new_cliente_path %>
+
+<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler
+icon-tabler-circle-plus" width="32" height="32" viewBox="0 0 24 24"
+stroke-width="1.5" stroke="#009988" fill="none" stroke-linecap="round"
+stroke-linejoin="round">
+<path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<circle cx="12" cy="12" r="9" />
+<line x1="9" y1="12" x2="15" y2="12" />
+<line x1="12" y1="9" x2="12" y2="15" />
+</svg>
+<% end %>
+</div>
+</div>

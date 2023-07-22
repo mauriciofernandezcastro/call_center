@@ -1,0 +1,27 @@
+<%= form_with(model: control_acceso) do |form| %>
+  <% if control_acceso.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(control_acceso.errors.count, "error") %> prohibited this control_acceso from being saved:</h2>
+
+      <ul>
+        <% control_acceso.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :password, style: "display: block" %>
+    <%= form.number_field :password %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

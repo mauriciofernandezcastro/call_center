@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @control_acceso %>
+
+<div>
+  <%= link_to "Edit this control acceso", edit_control_acceso_path(@control_acceso) %> |
+  <%= link_to "Back to control accesos", control_accesos_path %>
+
+  <%= button_to "Destroy this control acceso", @control_acceso, method: :delete %>
+</div>
